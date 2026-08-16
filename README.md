@@ -9,7 +9,7 @@ Featuring role-based filtering, interactive case study deep dives, and clean res
 ## 🌟 Key Features
 
 * **Target Role Filter System:** Dynamically filters experience cards, projects, and skills based on the recruiter's track (**Business & Financial Analyst**, **Operations & Project Management**, or **Marketing & HR Specialist**).
-* **Interactive Modals:** Detailed popup drawers offering deep-dive case studies and measurable impact breakdowns for every position held.
+* **Interactive Modals:** Detailed pop-up drawers offering deep-dive case studies and measurable impact breakdowns for every position held.
 * **Resume Trigger:** Built-in PDF download trigger for easy recruiter access to formal credentials.
 * **Sleek Tech-Corporate Dark Theme:** Custom CSS styling featuring deep slate navy backdrops (`#0b132b`), high-contrast card elevation, and crisp ice-cyan accents (`#38bdf8`).
 * **Zero External Dependencies:** Built using lightweight pure vanilla HTML5, CSS3, and JavaScript (ES6+).
