@@ -24,13 +24,11 @@
   <!-- TAB 1: HOME PAGE -->
   <main id="home-page" class="page-content active">
     <section class="section centered-container text-center">
-      <!-- Headshot Photo Above About Me -->
       <div class="profile-frame">
         <div class="profile-bg-blur"></div>
         <img src="profile.jpg" alt="Leo Liang" class="profile-img">
       </div>
 
-      <!-- About Me Text Box -->
       <div class="about-card text-left">
         <h3>About Me</h3>
         <p>Business Administration student at LaGuardia CC combining data analytics (SQL, Python, Excel) with practical experience in project management, e-commerce, and business development. Experienced in building outbound sales pipelines, optimizing CRM workflows, and driving operational efficiency across internship and retail roles.</p>
@@ -52,74 +50,78 @@
           <span class="date">Spring 2026</span>
         </div>
         <ul>
-          <li>Developed a Shopify e-commerce prototype for branded apparel and plush merchandise targeting 300,000+ subscribers.</li>
-          <li>Managed sales operations, including manufacturer outreach, payment processing, inventory sourcing, and return policies.</li>
+          <li>Developed a Shopify e-commerce prototype for branded apparel and plush merchandise targeting 300,000+ subscribers[cite: 2].</li>
+          <li>Managed sales operations, including manufacturer outreach, payment processing, inventory sourcing, and return policies[cite: 2].</li>
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- TAB 3: TECHNICAL SKILLS PAGE -->
+  <!-- TAB 3: TECHNICAL SKILLS PAGE (ARROW CAROUSEL) -->
   <main id="skills-page" class="page-content">
-    <section class="section centered-container">
-      <div class="section-header-mini text-center">
+    <section class="section">
+      <div class="section-header text-center">
         <h2>Technical Capabilities</h2>
-        <p class="hint-text">↕ Scroll/Swipe inside the box to explore categories</p>
       </div>
 
-      <!-- Centered Scroll-Jacked Skills Container -->
-      <div class="scroll-jack-container">
-        
-        <!-- Slide 1: Certifications & Data Analysis -->
-        <div class="scroll-snap-panel">
-          <div class="panel-content">
-            <h3>Certifications & Data Analysis</h3>
-            <div class="pill-group">
-              <span class="pill accent">HubSpot Inbound Marketing Certification (2025)</span>
-              <span class="pill accent">IBM Business Analyst Professional Certificate (2025)</span>
-              <span class="pill">SQL (MySQL)</span>
-              <span class="pill">Python</span>
-              <span class="pill">Excel (Pivot Tables, VLOOKUP, Formulas)</span>
-              <span class="pill">Google Analytics</span>
+      <!-- Centered 3/5 Width Slider Container -->
+      <div class="skills-carousel-wrapper">
+        <button class="carousel-arrow prev-arrow" id="prevSkillBtn" aria-label="Previous Category">&#10094;</button>
+
+        <div class="skills-carousel-display">
+          <!-- Slide 1: Certifications & Data Analysis -->
+          <div class="skill-slide active">
+            <h3 class="slide-title">Certifications & Data Analysis</h3>
+            <div class="pill-group-large">
+              <span class="pill-large accent">HubSpot Inbound Marketing Certification (2025)</span>[cite: 2]
+              <span class="pill-large accent">IBM Business Analyst Professional Certificate (2025)</span>[cite: 2]
+              <span class="pill-large">SQL (MySQL)</span>[cite: 2]
+              <span class="pill-large">Python</span>[cite: 2]
+              <span class="pill-large">Excel (Pivot Tables, VLOOKUP, Formulas)</span>[cite: 2]
+              <span class="pill-large">Google Analytics</span>[cite: 2]
+            </div>
+          </div>
+
+          <!-- Slide 2: CRM & Enterprise Platforms -->
+          <div class="skill-slide">
+            <h3 class="slide-title">CRM & Enterprise Platforms</h3>
+            <div class="pill-group-large">
+              <span class="pill-large">Salesforce</span>[cite: 2]
+              <span class="pill-large">Oracle Fusion Cloud HCM</span>[cite: 2]
+              <span class="pill-large">HubSpot</span>[cite: 2]
+              <span class="pill-large">Monday.com</span>[cite: 2]
+              <span class="pill-large">LinkedIn Sales Navigator</span>[cite: 2]
+              <span class="pill-large">Shopline</span>[cite: 2]
+              <span class="pill-large">Omnisient</span>[cite: 2]
+            </div>
+          </div>
+
+          <!-- Slide 3: Marketing, Software & Operations -->
+          <div class="skill-slide">
+            <h3 class="slide-title">Marketing, Software & Operations</h3>
+            <div class="pill-group-large">
+              <span class="pill-large">Shopify</span>[cite: 2]
+              <span class="pill-large">Canva</span>[cite: 2]
+              <span class="pill-large">Google Workspace</span>[cite: 2]
+              <span class="pill-large">Microsoft Office Suite</span>[cite: 2]
+              <span class="pill-large">Adobe Creative Cloud</span>[cite: 2]
+              <span class="pill-large">SEO</span>[cite: 2]
+              <span class="pill-large">NCR Counterpoint POS</span>[cite: 2]
+              <span class="pill-large">Cash & Transaction Processing</span>[cite: 2]
+              <span class="pill-large">Inventory Auditing</span>[cite: 2]
+              <span class="pill-large">Register Reconciliation</span>[cite: 2]
             </div>
           </div>
         </div>
 
-        <!-- Slide 2: CRM & Enterprise Platforms -->
-        <div class="scroll-snap-panel">
-          <div class="panel-content">
-            <h3>CRM & Enterprise Platforms</h3>
-            <div class="pill-group">
-              <span class="pill">Salesforce</span>
-              <span class="pill">Oracle Fusion Cloud HCM</span>
-              <span class="pill">HubSpot</span>
-              <span class="pill">Monday.com</span>
-              <span class="pill">LinkedIn Sales Navigator</span>
-              <span class="pill">Shopline</span>
-              <span class="pill">Omnisient</span>
-            </div>
-          </div>
-        </div>
+        <button class="carousel-arrow next-arrow" id="nextSkillBtn" aria-label="Next Category">&#10095;</button>
+      </div>
 
-        <!-- Slide 3: Marketing, Software & Operations -->
-        <div class="scroll-snap-panel">
-          <div class="panel-content">
-            <h3>Marketing, Software & Operations</h3>
-            <div class="pill-group">
-              <span class="pill">Shopify</span>
-              <span class="pill">Canva</span>
-              <span class="pill">Google Workspace</span>
-              <span class="pill">Microsoft Office Suite</span>
-              <span class="pill">Adobe Creative Cloud</span>
-              <span class="pill">SEO</span>
-              <span class="pill">NCR Counterpoint POS</span>
-              <span class="pill">Cash & Transaction Processing</span>
-              <span class="pill">Inventory Auditing</span>
-              <span class="pill">Register Reconciliation</span>
-            </div>
-          </div>
-        </div>
-
+      <!-- Slide Indicator Dots -->
+      <div class="carousel-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
       </div>
     </section>
   </main>
@@ -129,7 +131,7 @@
     <section class="section centered-container">
       <div class="resume-header text-center">
         <h2>Leo Liang</h2>
-        <p>917-250-6132 | liangleozeng@gmail.com | linkedin.com/in/l-liang | liangleozeng.github.io</p>
+        <p>917-250-6132 | liangleozeng@gmail.com | linkedin.com/in/l-liang | liangleozeng.github.io</p>[cite: 2]
         <button id="downloadResumeBtn" class="btn-primary" style="margin-top: 1rem;">Download PDF Resume</button>
       </div>
 
@@ -146,9 +148,9 @@
 
       <div class="resume-block">
         <h3>Education</h3>
-        <p><strong>LaGuardia Community College</strong> — Associate of Science in Business Administration</p>
-        <p class="text-muted">Long Island City, NY | Sep. 2024 – Jun. 2026</p>
-        <p class="text-muted">Relevant Coursework: Business Management, Financial Accounting, Marketing, Business Communication & Law, Macroeconomics, Microeconomics</p>
+        <p><strong>LaGuardia Community College</strong> — Associate of Science in Business Administration</p>[cite: 2]
+        <p class="text-muted">Long Island City, NY | Sep. 2024 – Jun. 2026</p>[cite: 2]
+        <p class="text-muted">Relevant Coursework: Business Management, Financial Accounting, Marketing, Business Communication & Law, Macroeconomics, Microeconomics</p>[cite: 2]
       </div>
 
       <div class="resume-block">
@@ -156,50 +158,50 @@
         
         <div class="compact-timeline">
           <div class="timeline-card resume-item" data-category="operations analytics marketing-hr">
-            <h4>Project Manager Intern — Youth4am <span class="date">Jun. 2026 – Aug. 2026</span></h4>
+            <h4>Project Manager Intern — Youth4am <span class="date">Jun. 2026 – Aug. 2026</span></h4>[cite: 2]
             <ul>
-              <li>Designed an automated reporting pipeline and workflow system including a custom OKR intake form, automated email notification script, and Slack bot streamlining operational efficiency.</li>
-              <li>Managed and designed the internship hour-logging form, master tracking sheet, and M3 project tracker to monitor project progression and ensure 95% data accuracy.</li>
-              <li>Designed Standard Operating Procedures (SOPs) governing check-in monitoring, attendance verification, and weekly timesheet reviews.</li>
-              <li>Developed a centralized PM coordination calendar to align remote and field team workflows, ensuring 100% on-time weekly deliverable execution.</li>
+              <li>Designed an automated reporting pipeline and workflow system including a custom OKR intake form, automated email notification script, and Slack bot streamlining operational efficiency[cite: 2].</li>
+              <li>Managed and designed the internship hour-logging form, master tracking sheet, and M3 project tracker to monitor project progression and ensure 95% data accuracy[cite: 2].</li>
+              <li>Designed Standard Operating Procedures (SOPs) governing check-in monitoring, attendance verification, and weekly timesheet reviews[cite: 2].</li>
+              <li>Developed a centralized PM coordination calendar to align remote and field team workflows, ensuring 100% on-time weekly deliverable execution[cite: 2].</li>
             </ul>
           </div>
 
           <div class="timeline-card resume-item" data-category="analytics operations">
-            <h4>Community Engagement Intern — Grain Collective <span class="date">Jun. 2026 – Present</span></h4>
+            <h4>Community Engagement Intern — Grain Collective <span class="date">Jun. 2026 – Present</span></h4>[cite: 2]
             <ul>
-              <li>Facilitated in-person community conversations and public engagement sessions across park spaces, gathering feedback for data-driven engagement.</li>
-              <li>Administered targeted survey tools and interactive prompts for community input, boosting public engagement by 25%.</li>
-              <li>Documented field observations, project analysis, team discussions, and long-term public realm investment roadmaps.</li>
+              <li>Facilitated in-person community conversations and public engagement sessions across park spaces, gathering feedback for data-driven engagement[cite: 2].</li>
+              <li>Administered targeted survey tools and interactive prompts for community input, boosting public engagement by 25%[cite: 2].</li>
+              <li>Documented field observations, project analysis, team discussions, and long-term public realm investment roadmaps[cite: 2].</li>
             </ul>
           </div>
 
           <div class="timeline-card resume-item" data-category="marketing-hr analytics">
-            <h4>Business Development & Sales Lead Intern — QUAY Acceleration <span class="date">Mar. 2026 – Jun. 2026</span></h4>
+            <h4>Business Development & Sales Lead Intern — QUAY Acceleration <span class="date">Mar. 2026 – Jun. 2026</span></h4>[cite: 2]
             <ul>
-              <li>Developed a database of 500+ qualified prospects across financial services, startup founders, business owners, and government agencies to support pipeline growth.</li>
-              <li>Managed business development initiatives by tracking and optimizing CRM site data, improving outreach efficiency.</li>
-              <li>Developed a personalized outbound business email campaign, contributing to a 20% increase in client engagement.</li>
+              <li>Developed a database of 500+ qualified prospects across financial services, startup founders, business owners, and government agencies to support pipeline growth[cite: 2].</li>
+              <li>Managed business development initiatives by tracking and optimizing CRM site data, improving outreach efficiency[cite: 2].</li>
+              <li>Developed a personalized outbound business email campaign, contributing to a 20% increase in client engagement[cite: 2].</li>
             </ul>
           </div>
 
           <div class="timeline-card resume-item" data-category="operations marketing-hr">
-            <h4>Customer Service & Sales Associate — Macy's <span class="date">Sep. 2025 – Jan. 2026</span></h4>
+            <h4>Customer Service & Sales Associate — Macy's <span class="date">Sep. 2025 – Jan. 2026</span></h4>[cite: 2]
             <ul>
-              <li>Promoted revenue growth for the star rewards program, increasing customer engagement and sign-up rates by 12%.</li>
-              <li>Coordinated packages for fulfillment and receiving process, establishing 95% accuracy for delivery and reducing processing errors.</li>
-              <li>Mentored new seasonal employees about the POS system, customer service standards, and operational workflow.</li>
-              <li>Facilitated daily retail operations while managing 100+ transactions per shift.</li>
+              <li>Promoted revenue growth for the star rewards program, increasing customer engagement and sign-up rates by 12%[cite: 2].</li>
+              <li>Coordinated packages for fulfillment and receiving process, establishing 95% accuracy for delivery and reducing processing errors[cite: 2].</li>
+              <li>Mentored new seasonal employees about the POS system, customer service standards, and operational workflow[cite: 2].</li>
+              <li>Facilitated daily retail operations while managing 100+ transactions per shift[cite: 2].</li>
             </ul>
           </div>
 
           <div class="timeline-card resume-item" data-category="analytics operations">
-            <h4>Operations Intern — Queens Botanical Garden <span class="date">Jun. 2024 – Aug. 2024</span></h4>
+            <h4>Operations Intern — Queens Botanical Garden <span class="date">Jun. 2024 – Aug. 2024</span></h4>[cite: 2]
             <ul>
-              <li>Analyzed product sales and pricing strategies to suggest adjustments that contributed to a 15% revenue increase.</li>
-              <li>Collected surveys and analyzed customer feedback to support event initiatives and improve visitor engagement by 20%.</li>
-              <li>Supported event operations and visitor engagement, hosting 35+ attendees per event.</li>
-              <li>Analyzed Excel spreadsheets to identify top-selling categories and products to forecast future revenue.</li>
+              <li>Analyzed product sales and pricing strategies to suggest adjustments that contributed to a 15% revenue increase[cite: 2].</li>
+              <li>Collected surveys and analyzed customer feedback to support event initiatives and improve visitor engagement by 20%[cite: 2].</li>
+              <li>Supported event operations and visitor engagement, hosting 35+ attendees per event[cite: 2].</li>
+              <li>Analyzed Excel spreadsheets to identify top-selling categories and products to forecast future revenue[cite: 2].</li>
             </ul>
           </div>
         </div>
@@ -213,7 +215,7 @@
     <h2>Contact Leo Liang</h2>
     <p>Direct inquiries, internship roles, and networking:</p>
     <div class="contact-links">
-      <a href="mailto:liangleozeng@gmail.com" class="btn-primary">liangleozeng@gmail.com</a>
+      <a href="mailto:liangleozeng@gmail.com" class="btn-primary">liangleozeng@gmail.com</a>[cite: 2]
     </div>
     <p class="copyright">© 2026 Leo Liang. All rights reserved.</p>
   </footer>
