@@ -1,8 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Safe Interactive Role Filtering
+  // 1. Page Navigation Tabs
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const pageContents = document.querySelectorAll('.page-content');
+
+  navTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      navTabs.forEach(t => t.classList.remove('active'));
+      pageContents.forEach(p => p.classList.remove('active'));
+
+      tab.classList.add('active');
+      const targetPage = document.getElementById(tab.getAttribute('data-tab'));
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+    });
+  });
+
+  // 2. Interactive Role Filtering
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const filterableItems = document.querySelectorAll('.timeline-item, .project-card');
+  const timelineCards = document.querySelectorAll('.timeline-card');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -11,21 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const selectedRole = button.getAttribute('data-role');
 
-      filterableItems.forEach(item => {
-        const categoryAttr = item.getAttribute('data-category');
+      timelineCards.forEach(card => {
+        const categoryAttr = card.getAttribute('data-category');
         if (!categoryAttr) return;
 
         const categories = categoryAttr.split(' ');
         if (selectedRole === 'all' || categories.includes(selectedRole)) {
-          item.classList.remove('hidden');
+          card.classList.remove('hidden');
         } else {
-          item.classList.add('hidden');
+          card.classList.add('hidden');
         }
       });
     });
   });
 
-  // 2. Interactive Modals
+  // 3. Modals Logic
   const modalBtns = document.querySelectorAll('.open-modal-btn');
   const closeBtns = document.querySelectorAll('.close-modal');
 
@@ -52,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Download Resume Trigger Simulator
+  // 4. Download Resume Simulator
   const downloadBtn = document.getElementById('downloadResumeBtn');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
@@ -60,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         downloadBtn.innerText = 'Downloaded!';
         setTimeout(() => {
-          downloadBtn.innerText = 'Download PDF Resume';
+          downloadBtn.innerText = 'Download PDF Version';
         }, 2000);
       }, 1000);
     });
