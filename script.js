@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   
-  // 1. Page Navigation Tabs
+  // 1. Navigation Tab Switching
   const navTabs = document.querySelectorAll('.nav-tab');
   const pageContents = document.querySelectorAll('.page-content');
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Interactive Role Filtering
+  // 2. Role Filter Functionality (Inside Experiences Page)
   const filterButtons = document.querySelectorAll('.filter-btn');
   const timelineCards = document.querySelectorAll('.timeline-card');
 
@@ -43,34 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Modals Logic
-  const modalBtns = document.querySelectorAll('.open-modal-btn');
-  const closeBtns = document.querySelectorAll('.close-modal');
-
-  modalBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-modal');
-      const targetModal = document.getElementById(modalId);
-      if (targetModal) {
-        targetModal.style.display = 'block';
-      }
-    });
-  });
-
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const parentModal = btn.closest('.modal');
-      if (parentModal) parentModal.style.display = 'none';
-    });
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = 'none';
-    }
-  });
-
-  // 4. Download Resume Trigger
+  // 3. Download Resume Trigger
   const downloadBtn = document.getElementById('downloadResumeBtn');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
