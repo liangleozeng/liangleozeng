@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Download Resume Simulator
+  // 4. Download Resume Trigger
   const downloadBtn = document.getElementById('downloadResumeBtn');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         downloadBtn.innerText = 'Downloaded!';
         setTimeout(() => {
-          downloadBtn.innerText = 'Download PDF Version';
+          downloadBtn.innerText = 'Download PDF Resume';
         }, 2000);
       }, 1000);
     });
