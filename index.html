@@ -3,7 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leo L<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leo Liang | Portfolio & Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Leo Liang <span class="badge-mini">AS Business Admin</span></div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-tab active" data-tab="home-page">Experience Home</a></li>
+      <li><a href="#" class="nav-tab" data-tab="resume-page">Resume</a></li>
+      <li><a href="mailto:liangleozeng@gmail.com" class="btn-primary">Email Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME PAGE: EXPERIENCE & ABOUT ME -->
+  <main id="home-page" class="page-content active">
+    <header class="hero">
+      <div class="hero-content text-center">
+        <span class="badge">Operations, Business & Analytics</span>
+        <h1>Leo Liang</h1>
+        
+        <!-- About Me Section -->
+        <div class="about-card text-left">
+          <h3>About Me</h3>
+          <p>Business Administration student at LaGuardia CC combining data analytics (SQL, Python, Excel) with practical experience in project management, e-commerce, and business development. Experienced in building outbound sales pipelines, optimizing CRM workflows, and driving operational efficiency across internship and retail roles.</p>
+        </div>
+
+        <div class="filter-wrapper centered-filter">
+          <label>Filter Experience by Focus Area:</label>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-role="all">All Roles</button>
+            <button class="filter-btn" data-role="analytics">Business & Financial Analyst</button>
+            <button class="filter-btn" data-role="operations">Operations & Project Mgmt</button>
+            <button class="filter-btn" data-role="marketing-hr">Marketing & HR Specialist</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section centered-container">
+      <h2 class="text-center">Professional Experience</h2>
+      <div class="compact-timeline">
+
+        <div class="timeline-card" data-category="operations analytics marketing-hr">
+          <div class="card-header">
+            <h3>Project Manager Intern</h3>
+            <span class="company">Youth4am</span>
+            <span class="date">Jun. 2026 – Aug. 2026</span>
+          </div>
+          <ul>
+            <li>Designed an automated reporting pipeline and custom OKR intake system reducing status tracking labor[cite: 2].</li>
+            <li>Managed master tracking sheets and M3 project trackers to ensure 95% data accuracy across teams[cite: 2].</li>
+            <li>Established SOPs for check-in monitoring, attendance verification, and weekly timesheet reviews[cite: 2].</li>
+          </ul>
+          <button class="btn-secondary full-width open-modal-btn" data-modal="modal-youth4am">View Description</button>
+        </div>
+
+        <div class="timeline-card" data-category="analytics operations">
+          <div class="card-header">
+            <h3>Community Engagement Intern</h3>
+            <span class="company">Grain Collective</span>
+            <span class="date">Jun. 2026 – Present</span>
+          </div>
+          <ul>
+            <li>Facilitated in-person public engagement sessions across park spaces to gather community feedback[cite: 2].</li>
+            <li>Administered targeted survey tools and interactive prompts, boosting public engagement by 25%[cite: 2].</li>
+            <li>Documented field observations, project analysis, and long-term public realm investment roadmaps[cite: 2].</li>
+          </ul>
+          <button class="btn-secondary full-width open-modal-btn" data-modal="modal-grain">View Description</button>
+        </div>
+
+        <div class="timeline-card" data-category="marketing-hr analytics">
+          <div class="card-header">
+            <h3>Business Development & Sales Lead Intern</h3>
+            <span class="company">QUAY Acceleration</span>
+            <span class="date">Mar. 2026 – Jun. 2026</span>
+          </div>
+          <ul>
+            <li>Developed a database of 500+ qualified prospects across finance, startups, and government sectors[cite: 2].</li>
+            <li>Tracked and optimized CRM site data to improve outreach efficiency and identify ICPs[cite: 2].</li>
+            <li>Designed personalized outbound email campaigns contributing to a 20% increase in client engagement[cite: 2].</li>
+          </ul>
+          <button class="btn-secondary full-width open-modal-btn" data-modal="modal-quay">View Description</button>
+        </div>
+
+        <div class="timeline-card" data-category="operations marketing-hr">
+          <div class="card-header">
+            <h3>Customer Service & Sales Associate</h3>
+            <span class="company">Macy's</span>
+            <span class="date">Sep. 2025 – Jan. 2026</span>
+          </div>
+          <ul>
+            <li>Promoted Star Rewards program enrollment, increasing customer sign-up rates by 12%[cite: 2].</li>
+            <li>Coordinated fulfillment packages establishing 95% accuracy for delivery receiving[cite: 2].</li>
+            <li>Facilitated daily retail operations while managing 100+ transactions per shift on POS systems[cite: 2].</li>
+          </ul>
+          <button class="btn-secondary full-width open-modal-btn" data-modal="modal-macys">View Description</button>
+        </div>
+
+        <div class="timeline-card" data-category="analytics operations">
+          <div class="card-header">
+            <h3>Operations Intern</h3>
+            <span class="company">Queens Botanical Garden</span>
+            <span class="date">Jun. 2024 – Aug. 2024</span>
+          </div>
+          <ul>
+            <li>Analyzed sales and pricing strategies in Excel to suggest adjustments yielding a 15% revenue increase[cite: 2].</li>
+            <li>Collected customer surveys to support event initiatives, improving visitor engagement by 20%[cite: 2].</li>
+            <li>Managed event operations for 35+ guests and forecast future revenue streams[cite: 2].</li>
+          </ul>
+          <button class="btn-secondary full-width open-modal-btn" data-modal="modal-qbg">View Description</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- RESUME PAGE -->
+  <main id="resume-page" class="page-content">
+    <section class="section centered-container">
+      <div class="resume-header text-center">
+        <h2>Leo Liang</h2>
+        <p>917-250-6132 | liangleozeng@gmail.com | linkedin.com/in/l-liang | liangleozeng.github.io</p>
+        <button id="downloadResumeBtn" class="btn-primary" style="margin-top: 1rem;">Download PDF Version</button>
+      </div>
+
+      <div class="resume-block">
+        <h3>Education</h3>
+        <p><strong>LaGuardia Community College</strong> — Associate of Science in Business Administration[cite: 2]</p>
+        <p class="text-muted">Long Island City, NY | Sep. 2024 – Jun. 2026[cite: 2]</p>
+        <p class="text-muted">Relevant Coursework: Business Management, Financial Accounting, Marketing, Business Communication & Law, Macroeconomics, Microeconomics[cite: 2]</p>
+      </div>
+
+      <div class="resume-block">
+        <h3>Experience Overview</h3>
+        <div class="resume-item">
+          <h4>Project Manager Intern — Youth4am <span class="date">Jun. 2026 – Aug. 2026</span></h4>
+          <p>Designed automated reporting pipelines, Slack bot notifications, and SOPs to maintain 100% on-time deliverable execution[cite: 2].</p>
+        </div>
+        <div class="resume-item">
+          <h4>Community Engagement Intern — Grain Collective <span class="date">Jun. 2026 – Present</span></h4>
+          <p>Facilitated park feedback sessions, administered survey tools boosting public input by 25%, and documented investment roadmaps[cite: 2].</p>
+        </div>
+        <div class="resume-item">
+          <h4>Business Development Intern — QUAY Acceleration <span class="date">Mar. 2026 – Jun. 2026</span></h4>
+          <p>Built a 500+ prospect B2B database and drove outbound campaigns yielding +20% client engagement[cite: 2].</p>
+        </div>
+        <div class="resume-item">
+          <h4>Customer Service & Sales Associate — Macy's <span class="date">Sep. 2025 – Jan. 2026</span></h4>
+          <p>Managed high-volume POS transactions (100+/shift), maintained 95% shipping accuracy, and grew reward sign-ups by 12%[cite: 2].</p>
+        </div>
+        <div class="resume-item">
+          <h4>Operations Intern — Queens Botanical Garden <span class="date">Jun. 2024 – Aug. 2024</span></h4>
+          <p>Analyzed pricing structures to drive a 15% revenue gain and hosted event operations for 35+ guests[cite: 2].</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modal-youth4am" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <span class="project-tag">Project Management</span>
+      <h2>Youth4am | Overview</h2>
+      <hr class="modal-divider">
+      <ul>
+        <li>Designed an automated reporting pipeline and workflow system including custom OKR intake forms, automated email scripts, and Slack bots[cite: 2].</li>
+        <li>Managed hour-logging forms, master tracking sheets, and M3 project trackers ensuring 95% data accuracy across remote and field teams[cite: 2].</li>
+        <li>Designed SOPs governing check-ins, attendance verification, and weekly timesheets[cite: 2].</li>
+        <li>Developed a centralized PM coordination calendar ensuring 100% on-time deliverable execution[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-grain" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <span class="project-tag">Analytics & Outreach</span>
+      <h2>Grain Collective | Overview</h2>
+      <hr class="modal-divider">
+      <ul>
+        <li>Facilitated in-person community conversations across park spaces to gather feedback for data-driven engagement[cite: 2].</li>
+        <li>Administered targeted survey tools and interactive prompts, boosting public engagement by 25%[cite: 2].</li>
+        <li>Documented field observations, project analysis, team discussions, and long-term public realm investment roadmaps[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-quay" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <span class="project-tag">Business Development</span>
+      <h2>QUAY Acceleration | Overview</h2>
+      <hr class="modal-divider">
+      <ul>
+        <li>Developed a database of 500+ qualified prospects across financial services, startups, and government agencies to support pipeline growth[cite: 2].</li>
+        <li>Managed business development initiatives by tracking and optimizing CRM site data to identify accurate ICPs[cite: 2].</li>
+        <li>Engineered outbound email campaigns contributing to a 20% increase in client engagement[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-macys" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <span class="project-tag">Operations</span>
+      <h2>Macy's | Overview</h2>
+      <hr class="modal-divider">
+      <ul>
+        <li>Promoted Star Rewards program growth, increasing customer sign-up rates by 12%[cite: 2].</li>
+        <li>Coordinated packages for fulfillment and receiving with 95% accuracy[cite: 2].</li>
+        <li>Mentored seasonal personnel on POS systems, service standards, and operational workflows[cite: 2].</li>
+        <li>Facilitated daily retail operations while managing 100+ transactions per shift[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-qbg" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <span class="project-tag">Operations & Pricing Analytics</span>
+      <h2>Queens Botanical Garden | Overview</h2>
+      <hr class="modal-divider">
+      <ul>
+        <li>Analyzed product sales and pricing strategies in Excel, recommending adjustments that contributed to a 15% revenue increase[cite: 2].</li>
+        <li>Collected customer feedback via surveys to improve visitor engagement by 20%[cite: 2].</li>
+        <li>Supported event operations and hosted gatherings for 35+ guests[cite: 2].</li>
+        <li>Analyzed Excel spreadsheets to identify top-selling categories and forecast future revenue[cite: 2].</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Direct Email Footer -->
+  <footer class="footer">
+    <h2>Contact Leo Liang</h2>
+    <p>Direct inquiries, internship roles, and networking:</p>
+    <div class="contact-links">
+      <a href="mailto:liangleozeng@gmail.com" class="btn-primary">liangleozeng@gmail.com</a>
+    </div>
+    <p class="copyright">© 2026 Leo Liang. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>iang | Portfolio & Resume</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
