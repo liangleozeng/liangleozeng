@@ -174,14 +174,37 @@ body {
   font-size: 1.1rem;
 }
 
-.quote-reflection {
-  font-size: 1rem;
-  color: var(--text-muted) !important;
+/* Initiatives Oval Box */
+.initiatives-oval {
+  background: var(--bg-surface);
+  border: 2px solid var(--accent-blue);
+  border-radius: 60px;
+  padding: 2rem 3.5rem;
+  margin: 2.5rem auto;
+  max-width: 750px;
+  box-shadow: var(--shadow);
+}
+
+.initiatives-oval h4 {
+  color: #60a5fa;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.initiatives-oval h4:first-child {
+  margin-top: 0;
+}
+
+.initiatives-oval p {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  line-height: 1.5;
 }
 
 /* BUSINESS RELATED INTERNSHIPS GRID LAYOUT */
 .internships-section {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 2rem;
 }
 
@@ -210,13 +233,13 @@ body {
   background: var(--bg-surface);
   border: 3px solid #000000;
   border-radius: 4px;
-  padding: 1.75rem 1.25rem;
+  padding: 2.5rem 1.75rem; /* Expanded size */
   text-align: center;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 220px;
+  min-height: 280px; /* Increased height */
 }
 
 .grid-role {
@@ -267,8 +290,8 @@ body {
 }
 
 .block-arrow-svg {
-  width: 70px;
-  height: 35px;
+  width: 100px;
+  height: 50px;
   flex-shrink: 0;
 }
 
@@ -384,7 +407,13 @@ body {
 }
 
 .icon-grain { background: #e879f9; color: #4a044e; }
-.icon-youth { background: #2563eb; color: #ffffff; }
+.icon-youth { 
+  background: #2563eb; 
+  color: #ffffff; 
+  font-size: 0.85rem; 
+  line-height: 1.1; 
+  text-align: center; 
+}
 .icon-quay  { background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1; }
 .icon-macys { background: #000000; color: #ffffff; font-size: 1.75rem; font-family: serif; }
 .icon-qbg   { background: #10b981; color: #064e3b; }
@@ -400,22 +429,22 @@ body {
   margin-bottom: 0.2rem;
 }
 
-.exp-subtitle-large {
-  font-size: 1.1rem;
-  color: #60a5fa;
-  font-weight: 600;
-}
-
 .exp-meta-large {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
 }
 
-.exp-summary-text-large {
-  font-size: 1.1rem;
-  color: var(--text-main);
+/* Bullet list replacing single paragraph summary */
+.exp-summary-list-large {
+  padding-left: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.exp-summary-list-large li {
+  font-size: 1.15rem; /* Increased size for bullets */
+  color: var(--text-main);
+  margin-bottom: 0.65rem;
   line-height: 1.6;
 }
 
