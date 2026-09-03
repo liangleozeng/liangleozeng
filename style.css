@@ -174,22 +174,22 @@ body {
   font-size: 1.1rem;
 }
 
-/* Initiatives Oval Box */
+/* Initiatives & Leadership Oval Box - Increased Text Size */
 .initiatives-oval {
   background: var(--bg-surface);
   border: 2px solid var(--accent-blue);
   border-radius: 60px;
-  padding: 2rem 3.5rem;
+  padding: 2.5rem 3.5rem;
   margin: 2.5rem auto;
-  max-width: 750px;
+  max-width: 800px;
   box-shadow: var(--shadow);
 }
 
 .initiatives-oval h4 {
   color: #60a5fa;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
+  font-size: 1.5rem; 
+  margin-bottom: 0.75rem;
+  margin-top: 1.75rem;
 }
 
 .initiatives-oval h4:first-child {
@@ -197,12 +197,13 @@ body {
 }
 
 .initiatives-oval p {
-  font-size: 1.05rem;
+  font-size: 1.25rem; 
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
-/* BUSINESS RELATED INTERNSHIPS GRID LAYOUT */
+/* BUSINESS RELATED INTERNSHIPS GRID LAYOUT - Increased Sizes */
 .internships-section {
   margin-top: 3.5rem;
   margin-bottom: 2rem;
@@ -219,7 +220,7 @@ body {
 .reference-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -233,39 +234,39 @@ body {
   background: var(--bg-surface);
   border: 3px solid #000000;
   border-radius: 4px;
-  padding: 2.5rem 1.75rem; /* Expanded size */
+  padding: 3rem 2rem; /* Substantially expanded size */
   text-align: center;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 280px; /* Increased height */
+  min-height: 320px; /* Increased height */
 }
 
 .grid-role {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Increased size */
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.3;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .grid-company {
-  font-size: 0.95rem;
+  font-size: 1.05rem; /* Increased size */
   color: #60a5fa;
   font-weight: 600;
 }
 
 .grid-date {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
 }
 
 .grid-desc {
-  font-size: 0.95rem;
+  font-size: 1.05rem; /* Increased size */
   color: var(--text-main);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 /* NAV CTA PROMPT */
@@ -426,25 +427,25 @@ body {
   font-size: 1.35rem;
   color: var(--text-main);
   font-weight: 700;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .exp-meta-large {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-/* Bullet list replacing single paragraph summary */
+/* Bullet list styling for Experience Feed - Increased Font Size */
 .exp-summary-list-large {
   padding-left: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
 .exp-summary-list-large li {
-  font-size: 1.15rem; /* Increased size for bullets */
+  font-size: 1.25rem; /* Extra increased size for legibility */
   color: var(--text-main);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
   line-height: 1.6;
 }
 
