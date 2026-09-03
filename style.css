@@ -21,6 +21,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -125,6 +126,18 @@ body {
   padding: 1rem 1rem 2rem;
 }
 
+/* Full Bleed Layout (Breaks the lines horizontally) */
+.full-bleed-section {
+  width: 95vw;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -47.5vw;
+  margin-right: -47.5vw;
+  padding: 2rem 0;
+}
+
 /* About Card & Quotes */
 .about-card, .project-card, .skills-box-card {
   background: var(--bg-surface);
@@ -174,77 +187,86 @@ body {
   font-size: 1.1rem;
 }
 
-/* Initiatives & Leadership Oval Box - Increased Text Size */
-.initiatives-oval {
+/* NEW STRETCHED OVAL PILLARS (Replaces original Initiatives Box) */
+.pillars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto 4rem;
+  max-width: 1300px;
+}
+
+.pillar-oval {
   background: var(--bg-surface);
-  border: 2px solid var(--accent-blue);
-  border-radius: 60px;
-  padding: 2.5rem 3.5rem;
-  margin: 2.5rem auto;
-  max-width: 800px;
+  border: 3px solid var(--accent-blue);
+  border-radius: 100px; /* Creates the wide pill/oval shape */
+  padding: 3.5rem 5rem;
   box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s;
 }
 
-.initiatives-oval h4 {
+.pillar-oval h4 {
   color: #60a5fa;
-  font-size: 1.5rem; 
-  margin-bottom: 0.75rem;
-  margin-top: 1.75rem;
+  font-size: 1.65rem; 
+  margin-bottom: 1rem;
 }
 
-.initiatives-oval h4:first-child {
-  margin-top: 0;
-}
-
-.initiatives-oval p {
+.pillar-oval p {
   font-size: 1.25rem; 
   color: var(--text-main);
   line-height: 1.6;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-/* BUSINESS RELATED INTERNSHIPS GRID LAYOUT - Increased Sizes */
-.internships-section {
-  margin-top: 3.5rem;
-  margin-bottom: 2rem;
+.pillar-oval p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .pillar-oval {
+    border-radius: 40px;
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* WIDE RECTANGULAR INTERNSHIPS GRID (1 Column) */
+.internships-section-wide {
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
 }
 
 .section-blue-title {
   color: #3b82f6;
-  font-size: 1.85rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.01em;
 }
 
-.reference-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+.rectangular-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
 }
 
-@media (max-width: 620px) {
-  .reference-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.grid-card {
+.wide-grid-card {
   background: var(--bg-surface);
   border: 3px solid #000000;
   border-radius: 4px;
-  padding: 3rem 2rem; /* Substantially expanded size */
+  padding: 2.5rem 3rem; 
   text-align: center;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 320px; /* Increased height */
 }
 
 .grid-role {
-  font-size: 1.35rem; /* Increased size */
+  font-size: 1.65rem; /* Larger for wide format */
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.3;
@@ -252,19 +274,19 @@ body {
 }
 
 .grid-company {
-  font-size: 1.05rem; /* Increased size */
+  font-size: 1.25rem; 
   color: #60a5fa;
   font-weight: 600;
+  margin-bottom: 1.25rem;
 }
 
 .grid-date {
-  font-size: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .grid-desc {
-  font-size: 1.05rem; /* Increased size */
+  font-size: 1.2rem; 
   color: var(--text-main);
   line-height: 1.5;
 }
@@ -276,7 +298,7 @@ body {
 }
 
 .cta-text {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: var(--text-main);
   margin-bottom: 1rem;
   font-weight: 500;
@@ -286,13 +308,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .block-arrow-svg {
-  width: 100px;
-  height: 50px;
+  width: 110px;
+  height: 55px;
   flex-shrink: 0;
 }
 
@@ -304,7 +326,7 @@ body {
 }
 
 .cta-link-btn {
-  font-size: 1.65rem !important;
+  font-size: 1.85rem !important;
   font-weight: 700 !important;
   color: #3b82f6 !important;
   text-decoration: underline !important;
@@ -317,7 +339,7 @@ body {
 }
 
 .cta-separator {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--border-dark);
   font-weight: 300;
 }
@@ -443,7 +465,7 @@ body {
 }
 
 .exp-summary-list-large li {
-  font-size: 1.25rem; /* Extra increased size for legibility */
+  font-size: 1.25rem; 
   color: var(--text-main);
   margin-bottom: 0.75rem;
   line-height: 1.6;
