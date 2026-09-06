@@ -1,52 +1,32 @@
-@ -18,42 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Navigation Tab Switching
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const pageContents = document.querySelectorAll('.page-content');
+
+  navTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetTabAttr = tab.getAttribute('data-tab');
+
+      navTabs.forEach(t => {
+        if (t.getAttribute('data-tab') === targetTabAttr) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+
+      pageContents.forEach(p => p.classList.remove('active'));
+
+      const targetPage = document.getElementById(targetTabAttr);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
   });
 
-  // 2. Technical Skills Carousel Logic
-  const slides = document.querySelectorAll('.skill-slide');
-  const dots = document.querySelectorAll('.dot');
-  const prevBtn = document.getElementById('prevSkillBtn');
-  const nextBtn = document.getElementById('nextSkillBtn');
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    if (slides.length === 0) return;
-
-    if (index >= slides.length) currentSlide = 0;
-    else if (index < 0) currentSlide = slides.length - 1;
-    else currentSlide = index;
-
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === currentSlide);
-    });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentSlide);
-    });
-  }
-
-  if (prevBtn && nextBtn) {
-    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
-  }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const slideIdx = parseInt(dot.getAttribute('data-slide'));
-      showSlide(slideIdx);
-    });
-  });
-
-  // 3. Role Filter Functionality (Inside Experiences Page)
-  // 2. Role Filter Functionality (Home Page)
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const timelineCards = document.querySelectorAll('.timeline-card');
-
-@ -78,6 +43,33 @@ document.addEventListener('DOMContentLoaded', () => {
-    });
-  });
-
-  // 3. Modals Logic (Deep Dives)
+  // 2. Modals Logic (Deep Dives)
   const modalBtns = document.querySelectorAll('.open-modal-btn');
   const closeBtns = document.querySelectorAll('.close-modal');
 
@@ -73,6 +53,17 @@
     }
   });
 
-  // 4. Download Resume Trigger
+  // 3. Download Resume Trigger
   const downloadBtn = document.getElementById('downloadResumeBtn');
   if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      downloadBtn.innerText = 'Downloading...';
+      setTimeout(() => {
+        downloadBtn.innerText = 'Downloaded!';
+        setTimeout(() => {
+          downloadBtn.innerText = 'Download PDF Resume';
+        }, 2000);
+      }, 1000);
+    });
+  }
+});
