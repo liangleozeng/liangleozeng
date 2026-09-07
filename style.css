@@ -195,7 +195,7 @@ body {
   }
 }
 
-/* --- Horizontal Skill Bubbles (Container +55%, Text +35%) --- */
+/* --- Horizontal Skill Bubbles --- */
 .pillars-row-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -276,7 +276,6 @@ body {
   aspect-ratio: 1 / 1; 
 }
 
-/* --- Increased Font Sizes for Business Internships --- */
 .grid-role {
   font-size: 1.6rem; 
   font-weight: 700;
@@ -324,11 +323,10 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* --- Improved Font Color for Projects & Research Headers --- */
 .project-card h3 {
   color: var(--accent-cyan);
   margin-bottom: 0.75rem;
-  font-size: 1.4rem; /* Slightly larger to pop more */
+  font-size: 1.4rem; 
   font-weight: 700;
 }
 
@@ -397,23 +395,24 @@ body {
   padding-bottom: 0.4rem;
 }
 
-/* --- Fixed Spacing for Technical Skills --- */
 .pill-group { 
   display: flex; 
   flex-wrap: wrap; 
-  gap: 0.8rem; /* Increased spacing between pills */
+  gap: 0.8rem; 
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .pill {
   background: var(--bg-dark);
   border: 1px solid var(--border-dark);
   color: var(--text-main);
-  padding: 0.55rem 1rem; /* Slightly larger padding */
+  padding: 0.55rem 1rem; 
   border-radius: 20px;
-  font-size: 0.95rem; /* Better visibility */
+  font-size: 0.95rem; 
   font-weight: 500;
 }
+
 .pill.accent {
   border-color: var(--accent-blue);
   color: #60a5fa;
