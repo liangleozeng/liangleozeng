@@ -1,0 +1,70 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Navigation Tab Switching
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const pageContents = document.querySelectorAll('.page-content');
+
+  navTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetTabAttr = tab.getAttribute('data-tab');
+
+      navTabs.forEach(t => {
+        if (t.getAttribute('data-tab') === targetTabAttr) {
+          t.classList.add('active');
+        } else {
+          t.classList.remove('active');
+        }
+      });
+
+      pageContents.forEach(p => p.classList.remove('active'));
+
+      const targetPage = document.getElementById(targetTabAttr);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // 2. Modals Logic (Deep Dives)
+  const modalBtns = document.querySelectorAll('.open-modal-btn');
+  const closeBtns = document.querySelectorAll('.close-modal');
+
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      const targetModal = document.getElementById(modalId);
+      if (targetModal) {
+        targetModal.style.display = 'block';
+      }
+    });
+  });
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parentModal = btn.closest('.modal');
+      if (parentModal) parentModal.style.display = 'none';
+    });
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+    }
+  });
+
+  // 3. Download Resume Trigger (Visual feedback for the button)
+  const downloadBtn = document.getElementById('downloadResumeBtn');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', () => {
+      const originalText = downloadBtn.innerText;
+      downloadBtn.innerText = 'Downloading...';
+      setTimeout(() => {
+        downloadBtn.innerText = 'Downloaded!';
+        setTimeout(() => {
+          downloadBtn.innerText = originalText;
+        }, 2000);
+      }, 1000);
+    });
+  }
+});
