@@ -53,15 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Download Resume Trigger
+  // 3. Download Resume Trigger (Visual feedback for the button)
   const downloadBtn = document.getElementById('downloadResumeBtn');
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
+      const originalText = downloadBtn.innerText;
       downloadBtn.innerText = 'Downloading...';
       setTimeout(() => {
         downloadBtn.innerText = 'Downloaded!';
         setTimeout(() => {
-          downloadBtn.innerText = 'Download PDF Resume';
+          downloadBtn.innerText = originalText;
         }, 2000);
       }, 1000);
     });
